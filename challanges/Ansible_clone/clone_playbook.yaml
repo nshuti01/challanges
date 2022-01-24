@@ -1,0 +1,9 @@
+---
+ - hosts: all
+   tasks:
+   - name: Clone a github repository
+     git:
+       repo: https://github.com/nikolayg/sample-python-api.git
+       dest: /home/devasc/labs/devnet-src/Clone/clone_repo
+       clone: yes
+       update: yes
