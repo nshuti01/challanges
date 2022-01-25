@@ -20,6 +20,7 @@ resp = requests.get(api_url, auth=basicauth, headers=headers, verify=False)
 
 #json data weergeven
 print (resp.headers)
+print (resp.status_code)
 
-if(resp.status_code >= 200 and resp.status_code <= 299):
- print("STATUS OK: {}".format(resp.status_code))
+if resp.status_code == 200:
+ print("OK")
