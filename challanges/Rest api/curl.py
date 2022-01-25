@@ -15,7 +15,11 @@ basicauth = ("cisco", "cisco123!")
 #send request and store json data
 resp = requests.get(api_url, auth=basicauth, headers=headers, verify=False)
 
-print(resp)
+
+
 
 #json data weergeven
 print (resp.headers)
+
+if(resp.status_code >= 200 and resp.status_code <= 299):
+ print("STATUS OK: {}".format(resp.status_code))
